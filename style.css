@@ -1,0 +1,46 @@
+.logo{
+    height: 60px;
+}
+.inclusive{
+    background-color: #f37121;
+    /* Biz sadece sağa veya sola radius verebiliyoruz */
+    border-bottom-left-radius: 55%;
+    border-bottom-right-radius: 55%;
+   
+}
+.navbar-nav .nav-item a{
+    color: #001696;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-item .nav-link:hover{
+    color: white;
+}
+@media (max-width: 768px){
+    .inclusive{
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+    .navbar-nav .nav-item{
+        margin-top: 15px;
+        /* Transition ise belli sürede getirmemize yaradı */
+        transition: all 0.5s ease;
+
+    }
+    /* Bu işlemi computers class hariç diğerlerinde uygula */
+    .navbar-nav .nav-item:hover:not(.computers){
+        background-color: white ;
+        padding-left: 40px;
+    }
+    .navbar-nav .nav-item :hover{
+        color: #f37121;
+    }
+    .navbar-nav .nav-item :before{
+        color: #f37121;
+    }
+    .logo-border{
+        color: #001696;
+        margin-right: 20px;
+        border-style: none;
+    }
+}
